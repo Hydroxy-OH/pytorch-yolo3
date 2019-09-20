@@ -140,7 +140,6 @@ def print_cfg(blocks):
                 print("%5d %-6s %d %d" % (ind, "route", layers[0], layers[1]))
                 prev_width = out_widths[layers[0]]
                 prev_height = out_heights[layers[0]]
-                print(prev_width, out_widths[layers[1]])
                 assert(prev_width == out_widths[layers[1]])
                 assert(prev_height == out_heights[layers[1]])
                 prev_filters = out_filters[layers[0]] + out_filters[layers[1]]
