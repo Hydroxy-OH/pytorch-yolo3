@@ -1,5 +1,6 @@
 from darknet import Darknet
 
+
 def partial(cfgfile, weightfile, outfile, cutoff):
     m = Darknet(cfgfile)
     m.print_network()
@@ -7,6 +8,7 @@ def partial(cfgfile, weightfile, outfile, cutoff):
     m.seen = 0
     m.save_weights(outfile, cutoff)
     print('save %s' % (outfile))
+
 
 if __name__ == '__main__':
     import sys
@@ -20,4 +22,3 @@ if __name__ == '__main__':
         print('Usage:')
         print('python partial.py cfgfile weightfile output cutoff')
         #partial('cfg/tiny-yolo-voc.cfg', 'tiny-yolo-voc.weights', 'tiny-yolo-voc.conv.15', 15)
-
